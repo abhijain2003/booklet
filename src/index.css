@@ -1,13 +1,365 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Navbar logo */
+
+.logo {
+  display: none;
+}
+
+.innerLogo {
+  display: block;
+}
+
+.custom-navbar {
+  text-decoration: none;
+}
+
+.navbar-btns {
+  display: flex;
+  width: 300px;
+  justify-content: space-evenly;
+}
+
+/* Home */
+
+.home {
+  width: 100%;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #9fb4ff;
+}
+
+.style {
+  height: 100%;
+  width: 100%;
+  background-color: yellow;
+  border-radius: 0 50% 50% 0;
+  z-index: 1;
+  position: relative;
+}
+
+.left {
+  text-align: center;
+  display: flex;
+}
+
+.left img {
+  max-height: 350px;
+  z-index: 100;
+  position: relative;
+  right: 300px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.right h1 {
+  color: yellow;
+  font-size: 52px;
+}
+
+.right button {
+  border: none;
+  color: #9fb4ff;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: white;
+  margin: 0 50px;
+  height: 40px;
+  width: 100px;
+}
+
+.product_one {
+  display: flex;
+  overflow-x: scroll;
+  width: 95%;
+  margin: 25px auto 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.content:hover {
+  transform: scale(1.1);
+}
+
+/* ProductInfo */
+
+.InfoContainer {
+  display: flex;
+  min-height: 100vh;
+}
+
+.ImageBar {
+  width: 40%;
+  text-align: center;
+}
+
+.InfoBar {
+  width: 60%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.ImageBar img {
+  height: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 100px auto;
+}
+
+.InfoBar h1 {
+  font-weight: 400;
+  font-size: 42px;
+  color: #9fb4ff;
+}
+
+.innerMidBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.innerTitleBar,
+.innerPriceBar,
+.innerAuthorBar,
+.innerPageBar,
+.innerRatingBar,
+.innerPublishBar {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.innerAuthorBar,
+.innerPageBar,
+.innerRatingBar,
+.innerPublishBar,
+.innerDescripBar {
+  flex-direction: column;
+}
+
+.innerTitleBar p,
+.innerPriceBar p,
+.innerPriceBar button {
+  height: fit-content;
+  width: fit-content;
+  background-color: #9fb4ff;
+  text-align: center;
+  color: darkblue;
+  font-weight: 600;
+  padding: 2px 4px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.innerTitleBar p {
+  width: 200px;
+}
+
+.innerDescripBar p button {
+  background: none;
+  border: none;
+  color: #9fb4ff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* About page */
+
+.About {
+  width: 100%;
+  height: 200px;
+  background-color: #9fb4ff;
+}
+
+.innerAbout {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 25px;
+  justify-content: space-evenly;
+}
+
+.innerAbout #logo h1 {
+  color: white;
+}
+
+.innerAbout #logo h1 span {
+  color: yellow;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#knowUs,
+#security,
+#contact,
+#social {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.mailLink {
+  background-color: #30aadd;
+  width: 70px;
+  height: 30px;
+  border: 1px solid #9fb4ff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.license {
+  color: white;
+  background-color: black;
+  display: flex;
+  height: 50px;
+  opacity: 0.8;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+
+@media screen and (max-width: 960px) {
+  /* Navbar */
+
+  .logo {
+    display: block;
+  }
+
+  .custom-navbar {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .innerLogo {
+    display: none;
+  }
+
+  /* Home */
+
+  .home {
+    display: flex;
+    height: 700px;
+    flex-direction: column-reverse;
+  }
+
+  .right button {
+    margin: 0 auto;
+  }
+
+  .style {
+    visibility: hidden;
+  }
+
+  .left img {
+    right: 0%;
+  }
+
+  /* ProductInfo */
+
+  .InfoContainer {
+    flex-direction: column;
+  }
+
+  .ImageBar {
+    width: 100%;
+  }
+
+  .ImageBar img {
+    width: 200px;
+  }
+
+  .InfoBar {
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .innerTitleBar,
+  .innerPriceBar {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .innerAuthorBar,
+  .innerPageBar,
+  .innerRatingBar,
+  .innerPublishBar {
+    height: 25px;
+  }
+
+  .innerMidBar {
+    height: 200px;
+  }
+
+  .innerTitleBar {
+    height: max-content;
+  }
+
+  .innerTitleBar p {
+    margin-top: 20px;
+  }
+
+  .innerMidBar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* About page */
+
+  .innerAbout {
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+  }
+
+  .About {
+    min-height: 100vh;
+    padding: 0 auto;
+  }
+
+  .mailLink {
+    margin: 0 auto;
+  }
+
+  .license {
+    flex-direction: column;
+  }
 }
